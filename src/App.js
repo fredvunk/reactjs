@@ -4,10 +4,30 @@ import Todos from './components/Todos';
 import './App.css';
 
 class App extends Component {
+  state = {
+    todos: [
+      {
+        id: 1,
+        title: 'Take out the trash',
+        completed: false
+      },
+      {
+        id: 2,
+        title: 'Dinner with Krissu',
+        completed: false
+      },
+      {
+        id: 3,
+        title: 'Wash the dishes',
+        completed: false
+      }
+    ]
+  }
+
   render() {
     return (
       <div className="App">
-        <Todos/>
+        <Todos todos={this.state.todos}/>
       </div>
     );
   }
